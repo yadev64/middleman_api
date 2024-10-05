@@ -31,7 +31,7 @@ app.use('/proxy', (req, res, next) => {
 })
 
 // Start server
-const PORT = 3001
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Proxy server listening on port ${PORT}`)
 })
